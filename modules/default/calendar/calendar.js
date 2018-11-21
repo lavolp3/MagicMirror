@@ -282,8 +282,6 @@ Module.register("calendar", {
 					} else if (event.startDate - now < 2 * oneDay && event.startDate - now > 0) {
 						if (this.translate("DAYAFTERTOMORROW") !== "DAYAFTERTOMORROW") {
 							timeWrapper.innerHTML = this.capFirst(this.translate("DAYAFTERTOMORROW"));
-						} else {
-							timeWrapper.innerHTML = this.capFirst(moment(event.startDate, "x").fromNow());
 						}
 					} else {
 						/* Check to see if the user displays absolute or relative dates with their events
